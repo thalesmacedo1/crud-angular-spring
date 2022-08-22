@@ -10,11 +10,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  courses: Observable<Course[]>;
+  courses$: Observable<Course[]>;
   displayedColumns = ['name', 'category'];
 
   constructor(private courseService: CoursesService) {
-    this.courses = this.courseService.findAll();
+    this.courses$ = this.courseService.findAll();
   }
 
   ngOnInit(): void {}
