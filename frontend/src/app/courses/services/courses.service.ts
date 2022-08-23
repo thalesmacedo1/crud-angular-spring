@@ -13,7 +13,7 @@ export class CoursesService {
   findAll() {
     return this.httpClient.get<Course[]>(this.API).pipe(
       first(),
-      delay(10000),
+      delay(3000),
       tap((courses) => console.log(courses))
     );
   }
